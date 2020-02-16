@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center; font-weight: bolder;">Contacts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button routerLink="/full-details" *ngFor="let users of UsersList, let i= index">
+      <ion-label>
+          <ion-avatar slot="start">
+           <img src= {{users.picture.thumbnail}}>
+          </ion-avatar>
+        <h2>{{users.name.title}} {{users.name.first}} {{users.name.last}}</h2> 
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-tab-bar slot="icon-only" class="darkmode">
+  <ion-tab-button class="darkmode">
+    <ion-icon name="Call"></ion-icon>
+    <ion-badge color="primary">15</ion-badge>
+    <ion-label>Dial</ion-label>
+  </ion-tab-button>
+  <ion-tab-button class="darkmode" >
+    <ion-icon name="people"></ion-icon>
+    <ion-label>Contacts</ion-label>
+  </ion-tab-button>
+  <ion-tab-button class="darkmode" >
+    <ion-icon name="star"></ion-icon>
+    <ion-label>Favorites</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
