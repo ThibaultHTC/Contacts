@@ -11,7 +11,7 @@ export class ListContactPage  {
     this.users.getUsers().subscribe(
        data=> this.UsersList=Object.values(data));
       console.log(this.UsersList);
-
+      
 }
 
 ngOnInit() {

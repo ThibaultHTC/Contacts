@@ -6,12 +6,13 @@
 
 <ion-content>
   <ion-list>
-    <ion-item button routerLink="/full-details" *ngFor="let users of UsersList, let i= index">
+    <ion-item button routerLink="/full-details" *ngFor="let users of UsersList">
       <ion-label>
-          <ion-avatar slot="start">
-           <img src= {{users.picture.thumbnail}}>
-          </ion-avatar>
-        <h2>{{users.name.title}} {{users.name.first}} {{users.name.last}}</h2> 
+        <ion-avatar slot="start">
+          <img src={{users.picture.thumbnail}}>
+        </ion-avatar>
+        <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder;">{{users.name.title}}
+          {{users.name.first}} {{users.name.last}}</h2>
       </ion-label>
     </ion-item>
   </ion-list>
@@ -22,11 +23,11 @@
     <ion-badge color="primary">15</ion-badge>
     <ion-label>Dial</ion-label>
   </ion-tab-button>
-  <ion-tab-button class="darkmode" >
+  <ion-tab-button class="darkmode">
     <ion-icon name="people"></ion-icon>
     <ion-label>Contacts</ion-label>
   </ion-tab-button>
-  <ion-tab-button class="darkmode" >
+  <ion-tab-button class="darkmode">
     <ion-icon name="star"></ion-icon>
     <ion-label>Favorites</ion-label>
   </ion-tab-button>
