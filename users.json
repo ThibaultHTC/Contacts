@@ -29,8 +29,8 @@
             "email": "florinda.sales@example.com",
             "login": {
                 "uuid": "5e5f15d1-9b40-47cb-b029-c1911c37e9d7",
-                "username": "organicrabbit196",
-                "password": "butcher",
+                "username": "thibault",
+                "password": "toto",
                 "salt": "TsbEYREa",
                 "md5": "ccd50e982d270125984cb7a6e4ec176d",
                 "sha1": "bc054a4e5d615c0e06ab34ab5416ac8ac82ed404",

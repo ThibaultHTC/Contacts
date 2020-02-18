@@ -10,36 +10,26 @@
   <div id="container">
     <ion-card>
       <ion-icon name="person-circle" style="font-size: 2cm;"></ion-icon>
+      <p style="text-align: center; color: darkred; font-size: 20px" *ngIf="!found">{{error}}</p>
       <form>
         <ion-list line="full" class="ion-no-margin ion-no-padding">
           <ion-item>
             <ion-label class="label">Login<ion-text color="danger">*</ion-text></ion-label>
             <ion-item>
-              <ion-input required type="text" class="text" autofocus="true" ></ion-input>
+              <ion-input required type="text"  [(ngModel)]="Username" class="text"></ion-input>
             </ion-item>
           </ion-item>
           <ion-item>
             <ion-label class="label">Password<ion-text color="danger">*</ion-text></ion-label>
             <ion-item>
-              <ion-input required type="Password" class="text" ></ion-input>
+              <ion-input required type="Password" [(ngModel)]="Password" class="text" ></ion-input>
             </ion-item>
           </ion-item>
         </ion-list>
-        <ion-button routerLink="/list-contact" shape="round" color="dark">
+        <ion-button (click)="getUser()" routlink="/list-contacts" shape="round" color="dark">
           Submit
         </ion-button>
       </form>
     </ion-card>
   </div>
 </ion-content>
-<ion-tab-bar slot="icon-only" class="darkmode">
-  <ion-tab-button class="darkmode" >
-    <ion-icon name="arrow-back"></ion-icon>
-  </ion-tab-button>
-  <ion-tab-button class="darkmode" >
-    <ion-icon name="radio-button-off"></ion-icon>
-  </ion-tab-button>
-  <ion-tab-button class="darkmode">
-    <ion-icon name="square-outline"></ion-icon>
-  </ion-tab-button>
-</ion-tab-bar>

@@ -1,10 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="text-align: center; font-weight: bolder;">About</ion-title>
+    <ion-icon name="arrow-back" routerLink="/list-contact" style="font-size: 1cm; position:fixed; bottom:0.2cm" ></ion-icon>
+    <ion-title style="text-align: center; font-weight: bolder;">About user N° {{index}}</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content >
- 
+<ion-content *ngFor="let users of UsersList; let index = index;">
+  <img src="{{users.picture.medium}}"  width="80%">
+    <h3>Nom           : {{users.name.last}}</h3>
+    <h3>Prenom        : {{users.name.first}}</h3>
+    <h3>Email         : {{users.email}}</h3>
+    <h3>Sexe          : {{users.gender}}</h3>
+    <h3>Phone         : {{users.phone}}</h3>
+    <h3>Nationality   : {{users.nat}}</h3>
 </ion-content>
 <ion-tab-bar slot="icon-only" class="darkmode">
   <ion-tab-button class="darkmode">

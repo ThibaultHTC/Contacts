@@ -1,18 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="text-align: center; font-weight: bolder;">Contacts</ion-title>
+    <ion-icon name="arrow-back" routerLink="/home" style="font-size: 1cm; position:fixed; bottom:0.2cm"></ion-icon>
+    <ion-title style="text-align: center; font-weight: bolder; ">Contacts</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item button routerLink="/full-details" *ngFor="let users of UsersList">
+    <ion-item *ngFor="let index of UsersList" (click)="UserDetails(index.index)">
       <ion-label>
         <ion-avatar slot="start">
-          <img src={{users.picture.thumbnail}}>
+          <img src={{index.picture.thumbnail}}>
         </ion-avatar>
-        <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder;">{{users.name.title}}
-          {{users.name.first}} {{users.name.last}}</h2>
+        <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder; border-color: darkred;">
+          {{index.name.title}}
+          {{index.name.first}} {{index.name.last}}</h2>
       </ion-label>
     </ion-item>
   </ion-list>
